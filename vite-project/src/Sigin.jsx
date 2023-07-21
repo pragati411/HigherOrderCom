@@ -8,20 +8,16 @@ import {
   signInWithPopup,
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
 
-import { useContext } from "react";
-import { switchThemeContext } from "../context/themeContext";
-import { loginContext } from "../context/loginContext";
-import { Link } from "react-router-dom";
 const Firstblacktheme = () => {
   const triggerGoogleSign = () => {
     const firebaseConfig = {
-      apiKey: "AIzaSyAuf4L0P-b69m0IKQGl-UZ_6jkfO2wPtdQ",
-      authDomain: "chetak-4e794.firebaseapp.com",
-      projectId: "chetak-4e794",
-      storageBucket: "chetak-4e794.appspot.com",
-      messagingSenderId: "274010369347",
-      appId: "1:274010369347:web:91c7e573d4a55673d793f6",
-      measurementId: "G-JGBG2QJZMD",
+      apiKey: "AIzaSyCfm0Oy9s1kTyAvHbF_HQGKCMaFiTGnnck",
+      authDomain: "higherordercom.firebaseapp.com",
+      projectId: "higherordercom",
+      storageBucket: "higherordercom.appspot.com",
+      messagingSenderId: "154233443675",
+      appId: "1:154233443675:web:bb5a7f904bce062a92767e",
+      measurementId: "G-5856D37TS2",
     };
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
@@ -35,7 +31,7 @@ const Firstblacktheme = () => {
 
         // The signed-in user info.
         const user = result.user;
-        console.log("SK@user", user.displayName);
+        console.log("@user", user.displayName);
         const userProfile = {
           name: user.displayName,
           email: user.email,
@@ -56,13 +52,9 @@ const Firstblacktheme = () => {
       });
   };
 
-  
   return (
     <>
-      
-      <button onClick={test.setTestFunc}>Change test</button>
       <button onClick={triggerGoogleSign}>Google Sign-In</button>
-      
     </>
   );
 };
